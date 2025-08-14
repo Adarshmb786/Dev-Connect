@@ -22,7 +22,7 @@ const Navbar = () => {
         DEV CONNECT
       </h1>
       <div className="flex gap-2">
-        {!user.token ? (
+        {!user?.token ? (
           <>
             <button
               onClick={() => navigate("/start")}
