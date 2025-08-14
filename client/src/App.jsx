@@ -14,6 +14,7 @@ import Requests from "./Components/Requests";
 import Connections from "./Components/Connections";
 import ViewProfile from "./Components/ViewProfile";
 import Inbox from "./Components/Inbox";
+import PageNotFound from "./Components/PageNotFound";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/viewprofile/:id" element={<ViewProfile />} />/
             <Route path="/connections/inbox/:id" element={<Inbox />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>

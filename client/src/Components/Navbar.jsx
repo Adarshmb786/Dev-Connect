@@ -12,6 +12,7 @@ const Navbar = () => {
     localStorage.removeItem("token");
     navigate("/start");
   };
+
   return (
     <div className="flex justify-between p-4">
       <h1
@@ -21,7 +22,7 @@ const Navbar = () => {
         DEV CONNECT
       </h1>
       <div className="flex gap-2">
-        {!user ? (
+        {!user.token ? (
           <>
             <button
               onClick={() => navigate("/start")}
